@@ -1,0 +1,161 @@
+.dash {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: hsl(40, 30%, 97%);
+  direction: rtl;
+}
+
+.dash__sidebar {
+  background: hsl(145, 35%, 28%);
+  color: hsl(40, 30%, 97%);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.dash__brand {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: hsl(40, 30%, 97%);
+  text-decoration: none;
+}
+
+.dash__user {
+  font-size: 0.8rem;
+  color: hsla(40, 30%, 97%, 0.75);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid hsla(40, 30%, 97%, 0.15);
+}
+
+.dash__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.dash__nav-btn {
+  background: transparent;
+  border: none;
+  color: hsla(40, 30%, 97%, 0.85);
+  text-align: right;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.dash__nav-btn:hover { background: hsla(40, 30%, 97%, 0.1); }
+
+.dash__nav-btn--active {
+  background: hsl(42, 70%, 55%);
+  color: hsl(145, 35%, 18%);
+  font-weight: 600;
+}
+
+.dash__logout {
+  background: transparent;
+  border: 1px solid hsla(40, 30%, 97%, 0.3);
+  color: hsl(40, 30%, 97%);
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.875rem;
+}
+.dash__logout:hover { background: hsla(40, 30%, 97%, 0.1); }
+
+.dash__main {
+  padding: 2rem 2.5rem;
+  overflow-y: auto;
+}
+
+.dash__header { margin-bottom: 2rem; }
+.dash__title {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: hsl(145, 35%, 28%);
+  margin: 0 0 0.25rem;
+}
+.dash__subtitle { color: hsl(30, 8%, 45%); margin: 0; font-size: 0.95rem; }
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.kpi {
+  background: hsl(40, 30%, 99%);
+  border: 1px solid hsl(35, 20%, 88%);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+.kpi__label { font-size: 0.8rem; color: hsl(30, 8%, 45%); margin: 0 0 0.5rem; }
+.kpi__value { font-size: 1.75rem; font-weight: 700; color: hsl(145, 35%, 28%); margin: 0; font-family: 'Tajawal', sans-serif; }
+
+.panel {
+  background: hsl(40, 30%, 99%);
+  border: 1px solid hsl(35, 20%, 88%);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.panel__title {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: hsl(145, 35%, 28%);
+  margin: 0 0 1rem;
+}
+
+.dtable { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.dtable th, .dtable td {
+  text-align: right;
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid hsl(35, 20%, 92%);
+}
+.dtable th { color: hsl(30, 8%, 45%); font-weight: 600; font-size: 0.8rem; }
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge--ok { background: hsl(145, 40%, 92%); color: hsl(145, 35%, 28%); }
+.badge--pending { background: hsl(42, 80%, 92%); color: hsl(42, 70%, 35%); }
+.badge--warn { background: hsl(0, 70%, 95%); color: hsl(0, 70%, 40%); }
+
+.dash__cta {
+  background: hsl(145, 35%, 28%);
+  color: hsl(40, 30%, 97%);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.dash__cta:hover { opacity: 0.92; }
+
+.empty { text-align: center; color: hsl(30, 8%, 55%); padding: 2rem; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+  .dash { grid-template-columns: 1fr; }
+  .dash__sidebar { position: relative; height: auto; }
+  .dash__main { padding: 1.25rem; }
+}

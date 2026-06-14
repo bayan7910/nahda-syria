@@ -1,0 +1,72 @@
+.pd { padding-top: 4.5rem; background: hsl(40, 30%, 97%); min-height: 100vh; }
+
+.pd__hero {
+  position: relative;
+  background: linear-gradient(135deg, hsl(145, 35%, 28%), hsl(145, 35%, 18%));
+  color: #fff; padding: 3rem 1rem 2.5rem;
+}
+.pd__hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 20% 0%, hsla(38,75%,55%,0.25), transparent 60%); }
+.pd__hero-text { position: relative; max-width: 1200px; margin: 0 auto; }
+.pd__crumbs { display: block; font-size: 0.85rem; opacity: 0.85; margin-bottom: 0.5rem; }
+.pd__crumbs a { color: inherit; text-decoration: none; }
+.pd__title { font-family: 'Tajawal', sans-serif; font-size: 2rem; margin: 0 0 0.75rem; }
+.pd__meta { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; font-size: 0.95rem; }
+.pd__badge { padding: 0.3rem 0.75rem; border-radius: 999px; color: #fff; font-weight: 700; font-size: 0.85rem; }
+
+.pd__layout {
+  max-width: 1200px; margin: -1.5rem auto 3rem; padding: 0 1rem;
+  display: grid; grid-template-columns: 2fr 1fr; gap: 1.25rem;
+}
+.pd__main, .pd__side { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.pd__card {
+  background: #fff; border-radius: 0.85rem; padding: 1.5rem;
+  border: 1px solid hsl(35, 20%, 88%);
+  box-shadow: 0 4px 12px -6px rgba(0,0,0,0.05);
+}
+.pd__card h2 { font-family: 'Tajawal', sans-serif; margin: 0 0 0.75rem; color: hsl(145, 35%, 28%); font-size: 1.2rem; }
+.pd__card h3 { font-family: 'Tajawal', sans-serif; margin: 0 0 0.5rem; color: hsl(30, 10%, 15%); font-size: 1.05rem; }
+.pd__card p { color: hsl(30, 8%, 30%); line-height: 1.8; margin: 0 0 0.5rem; }
+
+.pd__gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+.pd__shot {
+  background: linear-gradient(135deg, hsl(35, 30%, 88%), hsl(35, 25%, 80%));
+  border-radius: 0.6rem; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;
+  flex-direction: column; color: hsl(30, 10%, 25%); font-weight: 600;
+}
+.pd__shot-ph { font-size: 2.5rem; }
+
+.pd__stages { list-style: none; padding: 0; margin: 0; }
+.pd__stages li { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0; color: hsl(30, 8%, 45%); }
+.pd__stages li.is-done { color: hsl(145, 35%, 28%); font-weight: 600; }
+.pd__stage-dot {
+  width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: hsl(35, 20%, 90%); color: hsl(30, 8%, 45%); font-size: 0.85rem;
+}
+.pd__stages li.is-done .pd__stage-dot { background: hsl(145, 35%, 28%); color: #fff; }
+
+.pd__map { height: 280px; border-radius: 0.6rem; overflow: hidden; border: 1px solid hsl(35, 20%, 88%); }
+
+.pd__donate { position: sticky; top: 5rem; }
+.pd__progress { height: 10px; background: hsl(40, 30%, 92%); border-radius: 999px; overflow: hidden; margin: 0.75rem 0; }
+.pd__progress div { height: 100%; background: linear-gradient(90deg, hsl(145, 35%, 28%), hsl(38, 75%, 55%)); }
+.pd__amounts { display: flex; justify-content: space-between; margin-bottom: 1rem; }
+.pd__amounts span { display: block; font-size: 0.8rem; color: hsl(30, 8%, 45%); }
+.pd__amounts strong { color: hsl(30, 10%, 15%); font-size: 1.05rem; }
+
+.pd-btn {
+  display: inline-block; padding: 0.75rem 1.25rem; border-radius: 0.5rem;
+  background: #fff; color: hsl(30, 10%, 15%); border: 1px solid hsl(35, 20%, 85%);
+  cursor: pointer; font-family: inherit; font-weight: 600; text-decoration: none; width: 100%;
+  text-align: center; box-sizing: border-box;
+}
+.pd-btn--primary { background: hsl(145, 35%, 28%); color: #fff; border-color: hsl(145, 35%, 28%); }
+.pd-btn--primary:hover { opacity: 0.92; }
+
+.pd-empty { padding: 8rem 1rem; text-align: center; }
+.pd-empty h1 { color: hsl(30, 10%, 25%); }
+
+@media (max-width: 900px) {
+  .pd__layout { grid-template-columns: 1fr; }
+  .pd__donate { position: static; }
+}

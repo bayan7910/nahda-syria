@@ -1,0 +1,130 @@
+.donate-page {
+  min-height: 100vh;
+  padding: 6rem 1rem 3rem;
+  background: linear-gradient(135deg, hsl(40, 30%, 97%) 0%, hsl(35, 40%, 90%) 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.donate-page__card {
+  width: 100%;
+  max-width: 720px;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2.25rem;
+  box-shadow: 0 10px 40px -10px hsla(145, 35%, 28%, 0.15);
+  border: 1px solid hsl(35, 20%, 88%);
+}
+
+.donate-page__head { text-align: center; margin-bottom: 1.5rem; }
+.donate-page__title { font-family: 'Tajawal', sans-serif; color: hsl(145, 35%, 28%); font-size: 1.75rem; margin: 0 0 0.25rem; }
+.donate-page__sub { color: hsl(30, 8%, 45%); margin: 0; }
+
+.donate-steps { display: flex; gap: 0.5rem; list-style: none; padding: 0; margin: 0 0 1.75rem; }
+.donate-steps__item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  background: hsl(40, 30%, 96%);
+  color: hsl(30, 8%, 45%);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.donate-steps__item.is-active { background: hsl(145, 40%, 95%); color: hsl(145, 35%, 28%); }
+.donate-steps__item.is-done { background: hsl(145, 35%, 28%); color: #fff; }
+.donate-steps__num {
+  width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.08); border-radius: 50%; font-size: 0.8rem;
+}
+.donate-steps__item.is-done .donate-steps__num { background: rgba(255,255,255,0.25); }
+
+.donate-step__title { font-family: 'Tajawal', sans-serif; color: hsl(30, 10%, 15%); font-size: 1.2rem; margin: 0 0 1rem; }
+.donate-step__sub { font-family: 'Tajawal', sans-serif; color: hsl(30, 10%, 15%); font-size: 1rem; margin: 1.5rem 0 0.75rem; }
+
+.amount-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-bottom: 1rem; }
+.amount-grid__btn {
+  padding: 1rem; border-radius: 0.6rem; border: 2px solid hsl(35, 20%, 88%);
+  background: #fff; font-weight: 700; font-size: 1.05rem; cursor: pointer; font-family: inherit;
+  color: hsl(30, 10%, 15%); transition: all 0.15s;
+}
+.amount-grid__btn:hover { border-color: hsl(145, 35%, 50%); }
+.amount-grid__btn.is-active { border-color: hsl(145, 35%, 28%); background: hsl(145, 40%, 95%); color: hsl(145, 35%, 28%); }
+
+.donate-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.donate-field { margin-bottom: 1rem; }
+.donate-label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.4rem; color: hsl(30, 10%, 15%); }
+.donate-input {
+  width: 100%; padding: 0.75rem 1rem; border: 1px solid hsl(35, 20%, 88%);
+  border-radius: 0.5rem; font-family: inherit; font-size: 0.95rem; box-sizing: border-box;
+  background: hsl(40, 30%, 99%);
+}
+.donate-input:focus { outline: none; border-color: hsl(145, 35%, 28%); box-shadow: 0 0 0 3px hsla(145, 35%, 28%, 0.1); }
+
+.donate-check {
+  display: flex; gap: 0.5rem; align-items: center; font-size: 0.9rem; color: hsl(30, 8%, 45%);
+  cursor: pointer; margin-top: 0.25rem;
+}
+
+.project-pick { display: grid; gap: 0.5rem; max-height: 320px; overflow-y: auto; padding-inline-end: 4px; }
+.project-pick__opt {
+  display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.85rem 1rem;
+  border: 2px solid hsl(35, 20%, 88%); border-radius: 0.6rem; cursor: pointer; background: #fff;
+}
+.project-pick__opt:hover { border-color: hsl(145, 35%, 50%); }
+.project-pick__opt.is-active { border-color: hsl(145, 35%, 28%); background: hsl(145, 40%, 95%); }
+.project-pick__opt p { margin: 0.2rem 0 0; color: hsl(30, 8%, 45%); font-size: 0.85rem; }
+.project-pick__opt strong { color: hsl(30, 10%, 15%); }
+
+.method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+.method-grid__btn {
+  display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+  padding: 1rem; border: 2px solid hsl(35, 20%, 88%); border-radius: 0.6rem; background: #fff;
+  cursor: pointer; font-family: inherit; font-size: 0.9rem; font-weight: 600; color: hsl(30, 10%, 15%);
+}
+.method-grid__btn:hover { border-color: hsl(145, 35%, 50%); }
+.method-grid__btn.is-active { border-color: hsl(38, 75%, 55%); background: hsl(38, 80%, 95%); }
+.method-grid__icon { font-size: 1.5rem; }
+
+.donate-summary {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 1.25rem; background: hsl(145, 40%, 95%); border-radius: 0.6rem;
+  margin: 1.25rem 0; color: hsl(145, 35%, 28%); font-size: 1.05rem;
+}
+.donate-summary strong { font-size: 1.4rem; }
+
+.donate-actions {
+  display: flex; gap: 0.75rem; justify-content: space-between; margin-top: 1.25rem;
+}
+.donate-actions--center { justify-content: center; }
+.donate-btn {
+  padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: 1px solid hsl(35, 20%, 80%);
+  background: #fff; cursor: pointer; font-family: inherit; font-weight: 600; color: hsl(30, 10%, 15%);
+  text-decoration: none; display: inline-block;
+}
+.donate-btn--primary { background: hsl(145, 35%, 28%); color: #fff; border-color: hsl(145, 35%, 28%); }
+.donate-btn--primary:hover { opacity: 0.92; }
+.donate-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.donate-error {
+  background: hsl(0, 70%, 95%); color: hsl(0, 70%, 40%);
+  padding: 0.75rem 1rem; border-radius: 0.5rem; margin-bottom: 1rem;
+  border: 1px solid hsl(0, 70%, 85%); font-size: 0.9rem;
+}
+
+.donate-success { text-align: center; padding: 1rem 0; }
+.donate-success__icon { font-size: 4rem; margin-bottom: 0.5rem; }
+.donate-success h2 { color: hsl(145, 35%, 28%); font-family: 'Tajawal', sans-serif; margin: 0.5rem 0; }
+.donate-success__receipt {
+  display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem;
+  background: hsl(40, 30%, 96%); border-radius: 0.4rem; color: hsl(30, 10%, 15%);
+}
+.donate-success code { font-family: 'Courier New', monospace; color: hsl(38, 75%, 45%); }
+
+@media (max-width: 600px) {
+  .donate-row, .method-grid, .amount-grid { grid-template-columns: 1fr 1fr; }
+  .donate-page__card { padding: 1.5rem; }
+  .donate-steps__item span:not(.donate-steps__num) { display: none; }
+}

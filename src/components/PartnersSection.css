@@ -1,0 +1,67 @@
+.partners {
+  padding: 5rem 0;
+  background: hsl(40, 25%, 95%);
+}
+
+.partners__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.partners__tag {
+  color: hsl(38, 75%, 55%);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.partners__title {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: hsl(30, 10%, 15%);
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .partners__title { font-size: 2.25rem; }
+}
+
+.partners__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .partners__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .partners__grid { grid-template-columns: repeat(6, 1fr); }
+}
+
+.partners__item {
+  background: hsl(40, 30%, 97%);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hsl(35, 20%, 88%);
+  transition: border-color 0.2s;
+}
+
+.partners__item:hover {
+  border-color: hsla(145, 35%, 28%, 0.3);
+}
+
+.partners__name {
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 700;
+  color: hsla(30, 10%, 15%, 0.7);
+}
